@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install ca-certificates -y && update-ca-certificat
 
 COPY gradlew .
 COPY gradle gradle
+RUN chmod +x gradlew
 RUN ./gradlew
 
 COPY build.gradle.kts settings.gradle.kts ./
